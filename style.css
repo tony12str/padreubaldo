@@ -1,0 +1,581 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img{
+  user-select:none;
+  -webkit-user-drag:none;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body{
+  font-family:'Poppins',sans-serif;
+
+  background:
+  linear-gradient(180deg,#08111f,#132238,#1f3555);
+
+  min-height:100vh;
+
+  overflow-x:hidden;
+  overflow-y:auto;
+
+  color:white;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  position:relative;
+
+  padding:20px;
+}
+/* =========================
+   FONDO BRILLANTE
+========================= */
+
+.overlay{
+  position:fixed;
+
+  width:100%;
+  height:100%;
+
+  top:0;
+  left:0;
+
+  background:
+  radial-gradient(
+    circle at top,
+    rgba(255,215,120,.15),
+    transparent 50%
+  );
+
+  z-index:0;
+}
+
+/* =========================
+   ESTRELLAS
+========================= */
+
+.stars{
+  position:fixed;
+
+  width:100%;
+  height:100%;
+
+  background-image:
+  radial-gradient(white 1px, transparent 1px);
+
+  background-size:50px 50px;
+
+  opacity:.15;
+
+  animation:starsMove 40s linear infinite;
+}
+
+@keyframes starsMove{
+
+  from{
+    transform:translateY(0);
+  }
+
+  to{
+    transform:translateY(-200px);
+  }
+
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.container{
+  position:relative;
+
+  z-index:2;
+
+  text-align:center;
+
+  width:100%;
+
+  max-width:900px;
+}
+
+/* =========================
+   CRUZ
+========================= */
+
+.cross{
+  font-size:55px;
+
+  margin-bottom:12px;
+
+  color:#f5d77b;
+
+  animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+
+  from{
+    text-shadow:0 0 10px gold;
+  }
+
+  to{
+    text-shadow:0 0 30px gold;
+  }
+
+}
+
+/* =========================
+   TITULOS
+========================= */
+
+h1{
+  font-family:'Cinzel',serif;
+
+  font-size:clamp(38px,7vw,70px);
+
+  color:#fff4c7;
+
+  text-shadow:
+  0 0 20px rgba(255,255,255,.3);
+}
+
+h2{
+  margin-top:8px;
+
+  color:#f5d77b;
+
+  font-weight:300;
+
+  font-size:clamp(22px,4vw,38px);
+}
+
+/* =========================
+   MENSAJE
+========================= */
+
+.message{
+  margin:22px auto;
+
+  max-width:650px;
+
+  line-height:1.7;
+
+  font-size:clamp(15px,2vw,20px);
+
+  opacity:.95;
+
+  padding:0 10px;
+}
+
+/* =========================
+   FOTO
+========================= */
+
+.photo-frame{
+  width:190px;
+  height:190px;
+
+  margin:22px auto;
+
+  padding:7px;
+
+  border-radius:25px;
+
+  background:
+  linear-gradient(145deg,#f5d77b,#fff4c7);
+
+  box-shadow:
+  0 0 25px rgba(255,215,0,.35),
+  0 10px 30px rgba(0,0,0,.4);
+
+  animation:float 4s ease-in-out infinite;
+}
+
+.photo-frame img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  border-radius:18px;
+
+  border:4px solid white;
+}
+
+/* =========================
+   SACERDOTE
+========================= */
+
+.priest{
+  margin:20px auto 5px;
+
+  width:130px;
+
+  animation:float 3s ease-in-out infinite;
+}
+
+.head{
+  width:70px;
+  height:70px;
+
+  background:#f1c27d;
+
+  border-radius:50%;
+
+  margin:auto;
+
+  position:relative;
+}
+
+.head::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:70px;
+  height:30px;
+
+  background:#222;
+
+  border-radius:40px 40px 10px 10px;
+}
+
+.body{
+  width:90px;
+  height:135px;
+
+  background:#111;
+
+  margin:0 auto;
+
+  border-radius:20px;
+
+  position:relative;
+}
+
+.collar{
+  width:25px;
+  height:20px;
+
+  background:white;
+
+  position:absolute;
+
+  top:10px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  border-radius:0 0 8px 8px;
+}
+
+.cross-small{
+  position:absolute;
+
+  top:55px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  color:#f5d77b;
+
+  font-size:24px;
+}
+
+/* =========================
+   PASTEL
+========================= */
+
+.cake{
+  margin:22px auto;
+
+  position:relative;
+
+  width:160px;
+}
+
+.layer{
+  height:38px;
+
+  border-radius:12px;
+
+  margin:5px 0;
+}
+
+.top{
+  background:#fff0d1;
+}
+
+.middle{
+  background:#f7cfa3;
+}
+
+.bottom{
+  background:#d99b66;
+}
+
+.candle{
+  width:14px;
+  height:50px;
+
+  background:white;
+
+  margin:auto;
+
+  position:relative;
+}
+
+.flame{
+  width:18px;
+  height:18px;
+
+  background:gold;
+
+  border-radius:50%;
+
+  position:absolute;
+
+  top:-18px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  animation:flicker .4s infinite alternate;
+
+  box-shadow:0 0 25px gold;
+}
+
+@keyframes flicker{
+
+  from{
+    transform:translateX(-50%) scale(1);
+  }
+
+  to{
+    transform:translateX(-50%) scale(1.2);
+  }
+
+}
+
+/* =========================
+   GLOBOS
+========================= */
+
+.balloon{
+  position:absolute;
+
+  width:55px;
+  height:70px;
+
+  border-radius:50%;
+
+  opacity:0;
+
+  animation:
+  appear 2s forwards,
+  floatBalloon 5s ease-in-out infinite;
+}
+
+.balloon::after{
+  content:"";
+
+  position:absolute;
+
+  width:2px;
+  height:60px;
+
+  background:white;
+
+  left:50%;
+  top:70px;
+}
+
+.b1{
+  background:#ff6b6b;
+
+  left:3%;
+  top:8%;
+
+  animation-delay:1s;
+}
+
+.b2{
+  background:#ffd93d;
+
+  right:3%;
+  top:14%;
+
+  animation-delay:2s;
+}
+
+.b3{
+  background:#6bcBef;
+
+  left:6%;
+  top:70%;
+
+  animation-delay:3s;
+}
+
+.b4{
+  background:#b983ff;
+
+  right:6%;
+  top:72%;
+
+  animation-delay:4s;
+}
+
+@keyframes appear{
+
+  to{
+    opacity:1;
+  }
+
+}
+
+@keyframes floatBalloon{
+
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-20px);
+  }
+
+}
+
+/* =========================
+   BOTON
+========================= */
+
+button{
+  margin-top:20px;
+
+  padding:13px 24px;
+
+  border:none;
+
+  border-radius:40px;
+
+  background:#f5d77b;
+
+  color:#222;
+
+  font-size:15px;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+  font-weight:bold;
+
+  box-shadow:
+  0 10px 25px rgba(0,0,0,.3);
+}
+
+button:hover{
+  transform:scale(1.08);
+}
+
+/* =========================
+   FLOAT
+========================= */
+
+@keyframes float{
+
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+  body{
+    padding:12px;
+  }
+
+  .container{
+    transform:scale(.90);
+  }
+
+  h1{
+    font-size:34px;
+  }
+
+  h2{
+    font-size:22px;
+  }
+
+  .message{
+    font-size:14px;
+    line-height:1.5;
+    margin:14px auto;
+  }
+
+  .photo-frame{
+    width:145px;
+    height:145px;
+    margin:14px auto;
+  }
+
+  .priest{
+    margin:10px auto 0;
+    transform:scale(.82);
+  }
+
+  .cake{
+    width:130px;
+    margin:12px auto;
+  }
+
+  .layer{
+    height:30px;
+  }
+
+  .balloon{
+    width:40px;
+    height:55px;
+  }
+
+  button{
+    margin-top:14px;
+    padding:11px 18px;
+    font-size:14px;
+  }
+
+  .cross{
+    font-size:36px;
+    margin-bottom:5px;
+  }
+
+}
